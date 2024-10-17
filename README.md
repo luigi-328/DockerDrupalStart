@@ -1,6 +1,3 @@
-cd drupal/ <br>
-composer install --ignore-platform-reqs <br>
-cd .. <br>
 docker compose up -d <br>
 <br>
 conf db durante install: <br>
