@@ -5,7 +5,7 @@ services:
     container_name: drupal-app
     volumes:
       - ./www.conf:/usr/local/etc/php-fpm.d/www.conf
-      - ./drupal:/var/ww/html
+      - ./drupal:/var/www/html
     entrypoint: >
       sh -c "chown -R www-data:www-data /var/www/html/web && exec docker-php-entrypoint php-fpm"
     environment:
@@ -34,7 +34,7 @@ services:
     container_name: nginx
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./drupal:/var/ww/html
+      - ./drupal:/var/www/html
     ports:
       - "8080:80"
     depends_on:
