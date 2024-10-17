@@ -57,4 +57,4 @@ volumes:
 
 networks:
   drupal-network:
-    driver: bridge
+    name: drupal-network
