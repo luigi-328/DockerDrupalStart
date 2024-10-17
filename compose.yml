@@ -37,7 +37,7 @@ services:
       - drupal-app
     networks:
       - drupal-network
-      -
+
   adminer:
     image: adminer:latest
     container_name: adminer
