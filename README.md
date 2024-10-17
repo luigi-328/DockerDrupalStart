@@ -11,4 +11,4 @@ host: drupal-db <br>
 <br>
 <br>
 localhost:8080 -> drupal <br>
-localhost:8080 -> adminer
+localhost:8081 -> adminer
