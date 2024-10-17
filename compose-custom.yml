@@ -1,0 +1,50 @@
+services:
+
+  drupal-app:
+
+    image: drupal:11.0.5-php8.3-fpm-alpine3.19
+
+    container_name: drupal-app
+
+    environment:
+
+      - DRUPAL_DATABASE=drupal
+
+      - DRUPAL_DB_USER=drupal
+
+      - DRUPAL_DB_PASSWORD=drupal
+
+      - DRUPAL_DB_HOST=drupal-db
+
+    networks:
+
+      - wp-teknoring
+
+
+  nginx:
+
+    image: nginx:mainline-alpine3.20-slim
+
+    container_name: nginx
+
+    volumes:
+
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+
+    ports:
+
+      - "8080:80"
+
+    depends_on:
+
+      - drupal-app
+
+    networks:
+
+      - wp-teknoring
+
+
+
+networks:
+  wp-teknoring:
+    name: wp-teknoring
