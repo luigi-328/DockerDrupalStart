@@ -5,7 +5,8 @@ services:
     image: drupal:11.0.5-php8.3-fpm-alpine3.19
 
     container_name: drupal-app
-
+    volumes:
+      - ./www.conf:/usr/local/etc/php-fpm.d/www.conf
     environment:
 
       - DRUPAL_DATABASE=drupal
