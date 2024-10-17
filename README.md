@@ -4,7 +4,7 @@ cd .. <br>
 docker compose up -d <br>
 <br>
 conf db durante install: <br>
-db: drupa <br>
+db: drupal <br>
 user: drupal <br>
 pass: drupal <br>
 host: drupal-db <br>
