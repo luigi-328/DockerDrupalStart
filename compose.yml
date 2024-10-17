@@ -5,6 +5,7 @@ services:
     container_name: drupal-app
     volumes:
       - ./www.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./drupal:/var/ww/html
     entrypoint: >
       sh -c "chown -R www-data:www-data /var/www/html/web && exec docker-php-entrypoint php-fpm"
     environment:
